@@ -1,3 +1,7 @@
+main {
+    height: 100vh;
+    width: 100vw;
+}
 #boxroxa {
 	height:60vh ;
     width:80vw ;
@@ -13,37 +17,42 @@
     border-right: 0.4vh solid #2D3648;
 
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 20vh 20vh 20vh;
 	gap: 2px;
 	row-gap: 2px;
+    column-gap: 10px;
 }
 
 .grid1 {
     grid-column: 1;
     grid-row: 1;
-    background-color: blue;
+    margin: auto;
 }
 .grid2 {
-    grid-column: 3;
+    grid-column-start:2;
     grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: blue;
+    grid-row-end: 4;
 }
 .grid3 {
-    grid-column:;
+    grid-column:3;
 	grid-row-start: 1;
 	grid-row-end: 3;
-    background-color: blue;
+    margin: auto;
 }
-
 
 .grid5 {
-    grid-column:5;
+    grid-column:3;
     grid-row: 3;
-    background-color: blue;
+    margin: auto;
 }
 
+.grid6 {
+    grid-column:1;
+    grid-row: 3;
+    margin: auto;
+
+}
 
 
 .fotos {
@@ -54,9 +63,7 @@
     border-bottom-left-radius: 50px;
     border-top-right-radius:50px;
     width: 24vw;
-
-
-
+    z-index: 10;
 
 }
 .fotoAnf {
@@ -66,6 +73,8 @@
     border-top-left-radius: 50px;
     border-bottom-right-radius:50px;
     width: 20vw;
+    margin: auto;
+    transform: translate(10%,0);
 }
 
 .txtInfo, li, .nomeAnf {
@@ -77,15 +86,35 @@
     display: flex;
     align-items: center;
     color: #3A3A3C;
-    width: 25vw;
+    width: 30vw;
 
 }
 
-.nomeAnf {}
+p {
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+}
+
+.nomeAnf {
+    text-decoration: underline;
+    font-size: 32px;
+}
 
 #btConfirmar {
     height:3em;
     width: 7em;
     cursor: pointer;
 
+}
+
+
+.btSeletor {
+
+    border-radius: 100%;
+    cursor: pointer;
+    width: 2vw;
+    height: 4vh;
 }

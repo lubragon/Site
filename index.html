@@ -13,26 +13,42 @@
 
 
     <main>
+        < img src="2.png" class="fotos" id="cozinha" alt="Cozinha">
         <div id="boxroxa">
 
             <!-- Vera Info -->
-            <div><img src="1.png" alt="Sala da Vera" class="fotos" class="grid1"></div>
+            <div class="grid1" class="slider">
+                <img src="1.png" class="fotos" id="sala" alt="Sala" o nmouseover="this.src='2.png'">
+                
+            </div>
+            <div class="grid3"><img src="vera.jpg" alt="Foto da Vera Damasceno" class="fotoAnf"></div>
             <div class="grid2">
-                <h2 class="nomeAnf">Vera Damasceno</h2>
+                <h2 class="nomeAnf">Vera Damasceno</h2> <br>
                 <p class="txtInfo">
                     Vaga para 2 pessoas da mesma família <br>
+                    Somente a anfritriã mora nesta casa <br>
                     Não aceita animais <br>
+                    Apartamento de 55m² <br>
                     Ocupação disponível:<br>
                     <ul> 
+                        <li>1 Cozinha</li>
                         <li>1 Quarto</li>
                         <li>1 Banheiro</li>
                         <li>2 Camas de Solteiro</li>
                     </ul>
                 </p> 
             </div>
-            <img src="vera.jpg" alt="Foto da Vera Damasceno" class="fotoAnf" class="grid3">
+            
 
-            <button type="button" id="btConfirmar" class="grid5" onclick="abrirTermo()">Submit</button>
+
+            <!-- Botão Confirmar -->
+            <div class="grid5"><button type="button" id="btConfirmar" onclick="abrirTermo()">Submit</button></div>
+
+            <!-- Botões da foto -->
+            <div class="grid6" id="boxButton">
+            <button type="button" class="btSeletor" id="but1" onclick="prev()">A</button>  
+            <button type="button" class="btSeletor" id="but2" onclick="next()"></button>  
+            </div>  
 
         </div>
 
