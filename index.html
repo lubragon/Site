@@ -4,6 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
@@ -11,104 +17,105 @@
 <body>
     <header>
 
-        TESTE
+        <div class="head">
+            <div class="head1"> <img src="logo.png" id="log" alt="Logo"> </div>
+            <div class="head2">Início</div>
+            <div class="head3">Procurar Casa</div>
+            <div class="head4">Registrar Casa</div>
+            <div class="head5">Contatos</div>
+            <div class="head6">Sobre Nós</div>
+            <div class="head7" id="cadastro">Logout</div>
+            <div class="head8" id="login">Profile</div>
+
+        </div>
     </header>
 
-
+    
 
     <main>
+        <div id="greyMask" style="display:none" >
+            <div id="boxTermo">
+                <h2 id="tituloTermo">Termos de compromisso</h2>
+                <button type="button" id="btFechar" onclick="fecharTermo()">X </button>
+                <p id="txtTermo">TERMO TERMO Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo laboriosam eos porro quidem, illum harum, quasi dolor sequi, ipsa possimus asperiores repellat ex dicta in adipisci quae incidunt sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, est. Accusantium sunt facilis obcaecati ab maxime dolore id dolores delectus aliquam quos consequuntur unde, reprehenderit fugiat sed. Minus, ipsam in? lorem  TERMO TERMO Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo laboriosam eos porro quidem, illum harum, quasi dolor sequi, ipsa possimus asperiores repellat ex dicta in adipisci quae incidunt sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, est. Accusantium sunt facilis obcaecati ab maxime dolore id dolores delectus aliquam quos consequuntur unde, reprehenderit fugiat sed. Minus, ipsam in? lorem  TERMO TERMO Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo laboriosam eos porro quidem, illum harum, quasi dolor sequi, ipsa possimus asperiores repellat ex dicta in adipisci quae incidunt sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, est. Accusantium sunt facilis obcaecati ab maxime dolore id dolores delectus aliquam quos consequuntur unde, reprehenderit fugiat sed. Minus, ipsam in? lorem  TERMO TERMO Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo laboriosam eos porro quidem, illum harum, quasi dolor sequi, ipsa possimus asperiores repellat ex dicta in adipisci quae incidunt sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, est. Accusantium sunt facilis obcaecati ab maxime dolore id dolores delectus aliquam quos consequuntur unde, reprehenderit fugiat sed. Minus, ipsam in? lorem  TERMO TERMO Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo laboriosam eos porro quidem, illum harum, quasi dolor sequi, ipsa possimus asperiores repellat ex dicta in adipisci quae incidunt sapiente. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, est. Accusantium sunt facilis obcaecati ab maxime dolore id dolores delectus aliquam quos consequuntur unde, reprehenderit fugiat sed. Minus, ipsam in? lorem   </p>
+                <button id="btOkTermo" onclick="pronto()">Concordo</button>
+            </div>
+        </div>
+
+        <div id="feito" style="display: none;">
+            <img src="gd.jpg" alt="">
+        </div>
+
         <div id="boxroxa">
 
             <!-- Vera Info -->
                 <div class="grid1" style="display:grid;" id="teste1" >
-                    <img src="1.png" class="fotos" alt="Sala">
+                    <img src="1.png" class="fotos" alt="Sala" id="carlos">
                 </div>
-
                 <div class="grid3" style="display: grid;" id="teste2">
                     <img src="vera.jpg" alt="Foto da Vera Damasceno" class="fotoAnf" >
                 </div>
 
                 <div class="grid2" style="display: grid;" id="teste3">
-                    <h2 class="nomeAnf">Vera Damasceno</h2> <br>
+                    <h2 class="nomeAnf">Vera Damasceno</h2>
                     <p class="txtInfo">
+                            34 anos, Professora <br>
                             Vaga para 2 pessoas da mesma família <br>
                             Somente a anfritriã mora nesta casa <br>
+                            Inglês fluente <br>
                             Não aceita animais <br>
-                            Apartamento de 55m² <br>
-                            Ocupação disponível:<br>
-                            <ul> 
-                                <li>1 Cozinha</li>
-                                <li>1 Quarto</li>
-                                <li>1 Banheiro</li>
-                                <li>2 Camas de Solteiro</li>
+                            Apartamento de 55m² <br> 
+                            Ocupação disponível: <br>
+                                - 1 Cozinha <br>
+                                - 1 Quarto <br>
+                                - 1 Banheiro <br>
+                                - 2 Camas de Solteiro
                             </ul>
                     </p> 
                 </div>
 
-
-            <!-- Casa da Sofia -->
-            <div class="grid1" style="display:none ;" id="sofia1">
-                <img src="ap2.1.jpg" class="fotos" id="cozinhaSofia" alt="Sala 2" >
-            </div>
-
-            <div class="grid3" style="display:none ;" id="sofia3">
-                <img src="sofia.jpg" alt="Sofia Pereira" class="fotoAnf">
-            </div>
-            <div class="grid2" style="display: none;" id="sofia2">    
-                <h2 class="nomeAnf">Sofia Pereira</h2>
-                <p class="txtInfo">
-                    Vaga para 1 pessoa <br>
-                    Aceita animais <br>
-                    Ocupação disponível:
-                    <ul> 
-                        <li>1 Quarto</li>
-                        <li>1 Banheiro</li>
-                        <li>1 Camas</li>
-                    </ul>
-                </p>
-            </div>
-
-
-
-
-
-
-            
-
-
             <!-- Botão Confirmar -->
             <div class="grid5"><button type="button" id="btConfirmar" onclick="abrirTermo()">Submit</button></div>
 
-            <!-- Botões da foto -->
+            <!-- Botões da vera -->
             <div class="grid6" id="boxButton">
-            <button type="button" class="btSeletor" id="but1" onclick="uno()"> 1</button>  
-            <button type="button" class="btSeletor" id="but2" onclick="dos()"> 2 </button>  
-            <button type="button" class="btSeletor" id="but3" onclick="tres()"> 3 </button>  
+            <button type="button" class="btSeletor" id="bt1" onclick="uno()"> </button>  
+            <button type="button" class="btSeletor" id="bt2" onclick="dos()"> </button>  
+            <button type="button" class="btSeletor" id="bt3" onclick="tres()"> </button>  
             </div>  
+        </div>
+
+        <div id="outrasCasas">
+            <div class="gridOutras1">
+                <img src="sofia.jpg" class="imgOutras" alt="">
+                <h2 class="h2Outras">Sofia Pereira</h2>
+            </div>
+            <div class="gridOutras2">
+                <img src="roberta.jpeg" class="imgOutras" alt="">
+                <h2 class="h2Outras">Roberta Maria</h2>
+            </div>
+            <div class="gridOutras3">
+                <img src="Lucia.png" class="imgOutras" alt="">
+                <h2 class="h2Outras">Lucia Bonfim</h2>
+
+            </div>
 
         </div>
 
-        <button id="btsofia" onclick="clicsof()">SOFIA</button>
-        <button id="btvera" onclick="clicvera()">VERA</button>
-        <button id="drD" onclick="de()">TUND</button>
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
     </main>
 
 
-    <footer></footer>
+    <footer>
+        <p id="txtCopy">Copyright 2022 Company Name.</p>
+
+        <!-- Links do foot direito -->
+        <div class="foot">
+            <div class="foot1">Privacy Policy</div>
+            <div class="foot2">Terms & Conditions</div>
+            <div class="foot3">Cookie Policy</div>
+            <div class="foot4">Contact</div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
