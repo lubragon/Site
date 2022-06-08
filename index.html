@@ -9,36 +9,70 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>
+
+        TESTE
+    </header>
 
 
 
     <main>
-        < img src="2.png" class="fotos" id="cozinha" alt="Cozinha">
         <div id="boxroxa">
 
             <!-- Vera Info -->
-            <div class="grid1" class="slider">
-                <img src="1.png" class="fotos" id="sala" alt="Sala" on mouseover="this.src='2.png'">
-                
+                <div class="grid1" style="display:grid;" id="teste1" >
+                    <img src="1.png" class="fotos" alt="Sala">
+                </div>
+
+                <div class="grid3" style="display: grid;" id="teste2">
+                    <img src="vera.jpg" alt="Foto da Vera Damasceno" class="fotoAnf" >
+                </div>
+
+                <div class="grid2" style="display: grid;" id="teste3">
+                    <h2 class="nomeAnf">Vera Damasceno</h2> <br>
+                    <p class="txtInfo">
+                            Vaga para 2 pessoas da mesma família <br>
+                            Somente a anfritriã mora nesta casa <br>
+                            Não aceita animais <br>
+                            Apartamento de 55m² <br>
+                            Ocupação disponível:<br>
+                            <ul> 
+                                <li>1 Cozinha</li>
+                                <li>1 Quarto</li>
+                                <li>1 Banheiro</li>
+                                <li>2 Camas de Solteiro</li>
+                            </ul>
+                    </p> 
+                </div>
+
+
+            <!-- Casa da Sofia -->
+            <div class="grid1" style="display:none ;" id="sofia1">
+                <img src="ap2.1.jpg" class="fotos" id="cozinhaSofia" alt="Sala 2" >
             </div>
-            <div class="grid3"><img src="vera.jpg" alt="Foto da Vera Damasceno" class="fotoAnf"></div>
-            <div class="grid2">
-                <h2 class="nomeAnf">Vera Damasceno</h2> <br>
+
+            <div class="grid3" style="display:none ;" id="sofia3">
+                <img src="sofia.jpg" alt="Sofia Pereira" class="fotoAnf">
+            </div>
+            <div class="grid2" style="display: none;" id="sofia2">    
+                <h2 class="nomeAnf">Sofia Pereira</h2>
                 <p class="txtInfo">
-                    Vaga para 2 pessoas da mesma família <br>
-                    Somente a anfritriã mora nesta casa <br>
-                    Não aceita animais <br>
-                    Apartamento de 55m² <br>
-                    Ocupação disponível:<br>
+                    Vaga para 1 pessoa <br>
+                    Aceita animais <br>
+                    Ocupação disponível:
                     <ul> 
-                        <li>1 Cozinha</li>
                         <li>1 Quarto</li>
                         <li>1 Banheiro</li>
-                        <li>2 Camas de Solteiro</li>
+                        <li>1 Camas</li>
                     </ul>
-                </p> 
+                </p>
             </div>
+
+
+
+
+
+
             
 
 
@@ -47,18 +81,23 @@
 
             <!-- Botões da foto -->
             <div class="grid6" id="boxButton">
-            <button type="button" class="btSeletor" id="but1" onclick="fotoPrev()">P</button>  
-            <button type="button" class="btSeletor" id="but2" onclick="fotoNext()">N</button>  
+            <button type="button" class="btSeletor" id="but1" onclick="uno()"> 1</button>  
+            <button type="button" class="btSeletor" id="but2" onclick="dos()"> 2 </button>  
+            <button type="button" class="btSeletor" id="but3" onclick="tres()"> 3 </button>  
             </div>  
 
         </div>
 
+        <button id="btsofia" onclick="clicsof()">SOFIA</button>
+        <button id="btvera" onclick="clicvera()">VERA</button>
+        <button id="drD" onclick="de()">TUND</button>
 
 
 
 
 
-        </div>
+
+    
 
 
 
@@ -70,5 +109,6 @@
 
 
     <footer></footer>
+    <script src="script.js"></script>
 </body>
 </html>
