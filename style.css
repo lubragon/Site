@@ -1,7 +1,41 @@
+
 main {
     height: 100vh;
     width: 100vw;
 }
+
+/* Atributos gerais dos elementos h2 */
+h2 {
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 100;
+    line-height: 130%;
+    color: #3A3A3C;
+}
+/* Atributos gerais dos parágrafos */
+p {
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: justify;
+}
+
+
+ul,
+.txtli {
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    align-items: center;
+    color: #3A3A3C;
+}
+
+
+
 #boxroxa {
 	height:60vh ;
     width:80vw ;
@@ -45,6 +79,7 @@ main {
     grid-column:3;
     grid-row: 3;
     margin: auto;
+    justify-self: center;
 }
 
 .grid6 {
@@ -63,7 +98,7 @@ main {
     border-bottom-left-radius: 50px;
     border-top-right-radius:50px;
     width: 24vw;
-    z-index: 10;
+
 
 }
 .fotoAnf {
@@ -90,13 +125,7 @@ main {
 
 }
 
-p {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 130%;
-}
+
 
 .nomeAnf {
     text-decoration: underline;
@@ -107,6 +136,10 @@ p {
     height:3em;
     width: 7em;
     cursor: pointer;
+
+    border-radius: 10px;
+    background-color: #005BBC;
+
 
 }
 
@@ -119,20 +152,416 @@ p {
     height: 4vh;
 }
 
-#btsofia {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
+/* Máscara cinza que aparece quando clica no btConfirmar, serve para dar destaque aos termos do serviço */
+#greyMask {
+    background: rgba(39, 37, 37, 0.596);
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    z-index: 5;
+    opacity: 100%;
+}
+
+/* Div da caixa que apresenta os termos do serviço */
+#boxTermo {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 35vw;
+    height: 60vh;
+
     position: absolute;
     left: 30vw;
+    top: 20vh;
+
+    background: #AC80A0;
+    border-bottom: 2px solid #2D3648;
+    opacity: 100%;
+    z-index: 10;
+
+    display:grid;
+    grid-template-columns: 1fr;
+	grid-template-rows: 1fr 35vh 1fr;
+	gap: 2px;
+	row-gap: 2px;
+    column-gap: 10px;
+    
+
+    
+}
+
+/* h2 do Termos do serviço */
+#tituloTermo {
+    position: absolute;
+    left: 7vw;
+    bottom: 85%;
+    font-size: 30px;
+    display: grid;
+    grid-row: 1;
+}
+
+#txtTermo {
+    overflow-y: scroll;
+    text-align: justify;
+    font-size: 14px;
+    position: absolute;
+    left: 5vw;
+    top: 10vh;
+    height: 35vh;
+    background-color: rgb(255, 255, 255);
+    grid-row: 1/2;
+    margin-top: 8px;
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
-#btvera {
-    width: 100px;
-    height: 100px;
-    background-color: #9c0c0c;
+#btOkTermo {
     position: absolute;
-    left: 50vw;
+    bottom: 2vh;
+    left: 15vw;
+    grid-row: 3;
+    border-radius: 10px;
+    
+}
 
+/* Botão fecha os termos */
+#btFechar {
+    color: rgb(255, 255, 255);
+    background-color: red;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}
+
+header {
+    height: 12vh;
+    width:100vw;
+    position: absolute;
+    top: 0%;
+    background: #5692D1;
+    border-bottom: #0D1317;
+    border-style: solid;
+    border-bottom-width: 2px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+}
+
+.head {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 12vh;
+    column-gap: 2px;
+    align-items: center;
+    word-spacing: -5px;
+    
+}
+
+
+.head1 {
+    display: grid;
+    grid-column:2;
+    grid-row: 1;
+    color: #FFFFFF;
+    margin-left:2vw ;
+
+}
+
+.head2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column:10;
+    grid-row: 1;
+    color: #717D96
+    ;
+
+}
+.head3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column:11;
+    grid-row: 1;
+    color: #2D3648;
+    text-decoration: underline;
+    width: 140px;
+
+
+}
+.head4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column:12;
+    grid-row: 1;
+    color: #717D96;
+    width: 150px;
+    
+
+}
+.head5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column:13;
+    grid-row: 1;
+    color: #717D96;
+}
+.head6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column:14;
+    grid-row: 1;
+    color: #717D96;
+    width: 140px;
+
+    margin-right:40px ;
+    
+}
+.head7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column:15;
+    grid-row: 1;
+    color: #000000;
+    margin-right: 15px;
+
+    border: #001E3D;
+    border-style: solid;
+    border-radius: 10px ;
+    height:48px;
+    width: 80px;
+
+
+}
+.head8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column:16;
+    grid-row: 1;
+    color: #FFFFFF;
+    text-align: center;
+    margin-right: 30px;
+
+
+    background-color: #001E3D;
+    border: #001E3D;
+    border-style: solid;
+    border-radius: 10px ;
+    height:48px;
+    width: 80px;
+
+}
+
+
+.head1:hover,
+.head2:hover,
+.head3:hover,
+.head4:hover,
+.head5:hover,
+.head6:hover,
+.head7:hover,
+.head8:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.head7:hover,
+.head8:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 25px;
+    height:48px;
+    width: 90px;
+
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+    height: 15vh;
+    width:100vw;
+    position: absolute;
+    top: 180vh;
+    background: #1A202C;
+}
+
+/* Links do canto direito do footer, trabalho com grids */
+.foot {
+    display:grid;
+    grid-template-columns: 6vw 10vw 6vw 6vw ;
+    gap: 1vw;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A0ABC0;
+    text-align: center;
+
+
+    position:absolute;
+    left: 65vw;
+    top: 8vh;
+}
+
+
+/* Que coisa mais linda. */
+.foot1:hover,
+.foot2:hover,
+.foot3:hover,
+.foot4:hover {
+    color: #AC80A0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Texto sobre canto esquerdo do footer */
+#txtCopy {
+    color: #FFFFFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin-left:3vw ;
+
+    position: absolute;
+    top: 4em;
+    left: 1em;
+}
+
+#outrasCasas {
+	height:40vh ;
+    width:60vw ;
+
+    position: absolute;
+    left: 23vw;
+    top: 100vh;
+    margin: auto;
+    padding: 10px;
+
+    background: #AC80A0;
+    border-bottom: 0.4vh solid #2D3648;
+    border-right: 0.4vh solid #2D3648;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 40vh;
+	gap: 2px;
+	row-gap: 2px;
+    column-gap: 10px;
+    justify-items: auto;
+
+}
+
+.imgOutras {
+    width: 15vw;
+    border: #000000;
+    border-style: solid;
+    border-radius: 20px;
+}
+.gridOutras1 {
+    display:grid;
+    grid-column: 1;
+    grid-row: 1;
+    width: 20px;
+    margin-left: 4.5vw;
+}
+.gridOutras2 {
+    display:grid;
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 2.25vw;
+}
+.gridOutras3 {
+    display:grid;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.h2Outras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 24px;
+    background-color: #AC80A0;
+
+    border: #FFFFFF;
+    border-style: solid;
+    border-width: 2px;
+
+    color: #0D1317;
+    width: 200px;
+    height: 40;
+
+    border-radius: 10px;
+}
+
+.txtInfo {
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    color: #3A3A3C;
+    width: 30vw;
+    overflow: auto;
+    font-size: 20px;
+
+}
+
+
+ul {
+    border: #0D1317;
+    border-style: solid;
+    border-width: 1px;
+    width: 20vw;
+    height: 23vh;
+    margin: auto;
+}
+
+#feito {
+    background-color: #ebfff3;
+    width: 500px;
+    height: 400px;
+
+    margin: auto;
+    position: relative;
+    top:100px;
+    z-index: 30;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
 }
