@@ -54,7 +54,7 @@ main {
 
 }
 
-
+.fotos2,
 .fotos {
 	z-index: 2;
     border: #0D1317;
@@ -117,4 +117,22 @@ p {
     cursor: pointer;
     width: 2vw;
     height: 4vh;
+}
+
+#btsofia {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 30vw;
+
+}
+
+#btvera {
+    width: 100px;
+    height: 100px;
+    background-color: #9c0c0c;
+    position: absolute;
+    left: 50vw;
+
 }
