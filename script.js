@@ -44,6 +44,3 @@ function tres() {
 	$("#bt3")[0].style["background-color"]= "#001E3D";
 
 }
-
-
-
