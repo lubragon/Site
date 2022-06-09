@@ -1,5 +1,3 @@
-AAAAAA
-
 function abrirTermo() {
     $("#greyMask")[0].style["display"]= "flex";
     $("#btConfirmar")[0].style["background-color"]= "#001E3D";
@@ -46,5 +44,6 @@ function tres() {
 	$("#bt3")[0].style["background-color"]= "#001E3D";
 
 }
+
 
 
